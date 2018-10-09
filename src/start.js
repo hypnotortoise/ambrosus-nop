@@ -12,7 +12,9 @@ import config from '../config/config';
 
 const start = async () => {
   let builderObjects = Builder.buildStage1(config);
-  const {checkDockerAvailablePhase, selectNetworkPhase, getPrivateKeyPhase} = builderObjects;
+  const {checkDockerAvailablePhase, selectNetworkPhase, getPrivateKeyPhase, logoDialog} = builderObjects;
+
+  logoDialog();
 
   if (!await checkDockerAvailablePhase()) {
     return;

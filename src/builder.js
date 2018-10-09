@@ -53,6 +53,7 @@ import healthCheckUrlDialog from './dialogs/healthcheck_url_dialog';
 import dockerComposeCommandDialog from './dialogs/docker_compose_command_dialog';
 import insufficientFundsDialog from './dialogs/insufficient_funds_dialog';
 import genericErrorDialog from './dialogs/generic_error_dialog';
+import logoDialog from './dialogs/logo_dialog';
 
 import execCmd from './utils/execCmd';
 import messages from './messages';
@@ -98,6 +99,7 @@ class Builder {
     objects.dockerComposeCommandDialog = dockerComposeCommandDialog(messages);
     objects.insufficientFundsDialog = insufficientFundsDialog(messages);
     objects.genericErrorDialog = genericErrorDialog(messages);
+    objects.logoDialog = logoDialog;
 
     objects.selectNetworkPhase = selectNetworkPhase(networks, objects.stateModel, objects.askForNetworkDialog, objects.networkSelectedDialog);
     objects.checkDockerAvailablePhase = checkDockerAvailablePhase(objects.systemModel, objects.dockerDetectedDialog, objects.dockerMissingDialog);
